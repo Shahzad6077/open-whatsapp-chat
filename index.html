@@ -33,13 +33,15 @@
             min-height: 100vh;
             color: rgb(231, 243, 243);
             font-family: Quicksand, Arial, Helvetica, sans-serif;
-
+            padding: 0px 24px;
         }
 
         h1 {
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-align: center;
+            font-size: calc(14px + 2vw);
         }
 
         * {
@@ -72,7 +74,8 @@
 
 <body>
     <div>
-        <h1>Explore Chat</h1>
+        <h1>Explore Whatsapp Chat</h1>
+        <p>e.g: 923001234567</p>
         <form method="get" action="javascript:window.open(window.clickTag)" onSubmit="return validate_form(this);">
             <input name="no" placeholder="Enter Number" id="no" type="number" />
             <button>Open Chat</button>
