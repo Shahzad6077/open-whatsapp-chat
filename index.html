@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Explore Whatsapp Chat</title>
+    <script>
+        let clickTag = "https://api.whatsapp.com/send?phone=";
+
+        function validate_form() {
+            const no = document.getElementById('no').value;
+            window.clickTag = `https://web.whatsapp.com/send?phone=${no}`;
+        }
+    </script>
+    <style>
+        *,
+        ::after,
+        ::before {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #00bfa5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: rgb(231, 243, 243);
+            font-family: Quicksand, Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        * {
+            font-family: Quicksand, Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        input,
+        button {
+            padding: 4px 8px;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Explore Chat</h1>
+        <form method="get" action="javascript:window.open(window.clickTag)" onSubmit="return validate_form(this);">
+            <input name="no" placeholder="Enter Number" id="no" type="number" />
+            <button>Open Chat</button>
+        </form>
+    </div>
+</body>
+
+</html>
